@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Kalkulator Hipoteki</h1>
+    </header>
+    <main>
+        <div class="calculator">
+            <form class="calculator__form">
+                <label for="mortgageName" class="label calculator__label">Suma hipoteki</label>
+                <input type="text" id="mortgageName" class="input calculator__input"/>
+
+                <label for="mortgagePercent" class="label calculator__label">Oprocentowanie hipoteki</label>
+                <input type="text" id="mortgagePercent" class="input calculator__input"/>
+
+                <label for="mortgageAges" class="label calculator__label">Ilość lat hipoteki</label>
+                <input type="text" id="mortgageAges" class="input calculator__input"/>
+            </form>
+
+            <button type="submit" form="calculator__button">Wylicz</button>
+        </div>
+    </main>
+    <footer
+        <h4 class="footer__title">Created by <span class="footer__title--colored">Igor Borowski</span></h4>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>
