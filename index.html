@@ -20,8 +20,16 @@
                 <label for="mortgagePercent" class="label calculator__label">Oprocentowanie hipoteki</label>
                 <input type="text" id="mortgagePercent" class="input calculator__input"/>
 
-                <label for="mortgageAges" class="label calculator__label">Ilość lat hipoteki</label>
-                <input type="text" id="mortgageAges" class="input calculator__input"/>
+                <label for="mortgageMonths" class="label calculator__label">Ilość miesięcy hipoteki</label>
+                <input type="text" id="mortgageMonths" class="input calculator__input"/>
+
+                <div class="calculator__radio">
+                    <label for="yearsChoice" class="label calculator__label--radio">Lata:</label>
+                    <input type="radio" id="yearsChoice" name="choice" value="Lata" class="calculator__radio--button">
+                    
+                    <label for="monthsChoice" class="label calculator__label--radio">Miesiące:</label>
+                    <input type="radio" id="monthsChoice" name="choice" value="Miesiące" class="calculator__radio--button">
+                </div>
             </form>
 
             <button type="submit" form="calculator__form" class="calculator__button">Wylicz</button>

@@ -56,6 +56,10 @@ main {
         text-align: center;
         font-size: 16px;
         color: rgb(58, 58, 58);
+
+        &--radio {
+            padding: 0 0 0 10px;
+        }
     }
     &__input {
         border-radius: 20px;
@@ -79,6 +83,15 @@ main {
         color: #fff;
 
         background-color: rgb(138, 190, 160);
+    }
+    &__radio {
+        padding: 20px 0 5px 0;
+
+        &--button {
+            border: 1px solid #fff;
+            background: #000;
+            padding: 40px;
+        }
     }
 }
 
