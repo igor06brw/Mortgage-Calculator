@@ -1,12 +1,18 @@
-const sum = document.querySelector('#mortgageSum');
-const percent = document.querySelector('#mortgagePercent');
-const months = document.querySelector('#mortgageMonths');
-const button = document.querySelector('.calculator__button');
-const radioYear = document.querySelector('#yearsChoice');
-const radioMonth = document.querySelector('#monthsChoice');
-const results = document.querySelector('.results');
+const sum = document.querySelector('#mortgageSum'),
+      percent = document.querySelector('#mortgagePercent'),
+      months = document.querySelector('#mortgageMonths'),
+      button = document.querySelector('.calculator__button'),
+      radioYear = document.querySelector('#yearsChoice'),
+      radioMonth = document.querySelector('#monthsChoice'),
+      results = document.querySelector('.results'),
+      textFromLabel = document.querySelector('.calculator__label--month');
 
-
+radioYear.addEventListener('click', function() {
+        textFromLabel.innerHTML = "Ilość lat hipoteki";
+})
+radioMonth.addEventListener('click', function() {
+        textFromLabel.innerHTML = "Ilość miesięcy hipoteki";
+})
 
 button.addEventListener('click', displayResult);
 
@@ -23,9 +29,9 @@ function displayResult() {
         results.firstChild.remove();
 
         if(radioYear.checked == true) {
-                const ages = months.value * 12
-                R = sum.value * Math.pow(q, ages).toPrecision(6) * ((q-1) / (Math.pow(q, ages)-1).toPrecision(6));  
+                radioYearEvent;
         }
+        
         
 
         text.classList.add('results__text');

@@ -14,19 +14,19 @@
     <main>
         <div class="calculator">
             <form class="calculator__form">
-                <label for="mortgageSum" class="label calculator__label">Suma hipoteki</label>
+                <label for="mortgageSum" class="label calculator__label calculator__label--sum">Suma hipoteki</label>
                 <input type="text" id="mortgageSum" class="input calculator__input"/>
 
-                <label for="mortgagePercent" class="label calculator__label">Oprocentowanie hipoteki</label>
+                <label for="mortgagePercent" class="label calculator__label calculator__label--percent">Oprocentowanie hipoteki</label>
                 <input type="text" id="mortgagePercent" class="input calculator__input"/>
 
-                <label for="mortgageMonths" class="label calculator__label">Ilość miesięcy hipoteki</label>
-                <input type="text" id="mortgageMonths" class="input calculator__input"/>
+                <label for="mortgageMonths" class="label calculator__label calculator__label--month">Ilość miesięcy hipoteki</label>
+                <input type="text" id="mortgageMonths" class="input calculator__input" />
 
                 <div class="calculator__radio">
                     <label for="yearsChoice" class="label calculator__label--radio">Lata:</label>
-                    <input type="radio" id="yearsChoice" name="choice" value="Lata" class="calculator__radio--button">
-                    
+                    <input type="radio" id="yearsChoice" name="choice" value="Lata" class="calculator__radio--button" checked>
+
                     <label for="monthsChoice" class="label calculator__label--radio">Miesiące:</label>
                     <input type="radio" id="monthsChoice" name="choice" value="Miesiące" class="calculator__radio--button">
                 </div>
