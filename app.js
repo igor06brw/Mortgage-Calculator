@@ -1,3 +1,4 @@
+
 const sum = document.querySelector('#mortgageSum'),
       percent = document.querySelector('#mortgagePercent'),
       months = document.querySelector('#mortgageMonths'),
@@ -6,6 +7,8 @@ const sum = document.querySelector('#mortgageSum'),
       radioMonth = document.querySelector('#monthsChoice'),
       results = document.querySelector('.results'),
       textFromLabel = document.querySelector('.calculator__label--month');
+
+let arrayOfResults = [];
 
 radioYear.addEventListener('click', function() {
         textFromLabel.innerHTML = "Ilość lat hipoteki";
@@ -21,19 +24,19 @@ function displayResult() {
         const q = 1 + (percent.value / 100) / 12;
         let R = sum.value * Math.pow(q, months.value).toPrecision(6) * ((q-1) / (Math.pow(q, months.value)-1).toPrecision(6));
 
+        if(radioYear.checked == true) {
+                const ages = months.value * 12
+                R = sum.value * Math.pow(q, ages).toPrecision(6) * ((q-1) / (Math.pow(q, ages)-1).toPrecision(6));
+        }
+
+        arrayOfResults.push(R);
 
         const text  = document.createElement('h3'),
               spanValue = document.createElement('span'),
               spanCurrency = document.createElement('span');
 
         results.firstChild.remove();
-
-        if(radioYear.checked == true) {
-                radioYearEvent;
-        }
         
-        
-
         text.classList.add('results__text');
         spanValue.classList.add('results__value');
         spanCurrency.classList.add('results__currency');
@@ -47,6 +50,12 @@ function displayResult() {
         results.appendChild(text);
 }
 
+function historyFromResults() {
+        
+}
+
+
+console.log(arrayOfResults);
 
 
 

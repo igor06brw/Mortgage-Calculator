@@ -35,8 +35,47 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+main {
+  position: relative;
+}
+
 .input {
   max-width: 150px;
+}
+
+.history {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  background-color: #b46b6b;
+}
+
+.history__content {
+  margin: 10px 0;
+  background-color: #a03636;
+  width: 100px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.history__content:first-child {
+  margin: 0;
+}
+
+.history__content:last-child {
+  margin: 0;
+}
+
+.history__number {
+  text-align: center;
+  color: #fff;
 }
 
 .calculator {
