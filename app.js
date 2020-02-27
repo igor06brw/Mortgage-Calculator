@@ -6,7 +6,9 @@ const sum = document.querySelector('#mortgageSum'),
       radioYear = document.querySelector('#yearsChoice'),
       radioMonth = document.querySelector('#monthsChoice'),
       results = document.querySelector('.results'),
-      textFromLabel = document.querySelector('.calculator__label--month');
+      textFromLabel = document.querySelector('.calculator__label--month'),
+      history = document.querySelector('.history');
+
 
 let arrayOfResults = [];
 
@@ -48,14 +50,22 @@ function displayResult() {
         text.appendChild(spanValue);
         text.appendChild(spanCurrency);
         results.appendChild(text);
+
+        historyFromResults();
 }
 
 function historyFromResults() {
-        
+                const content = document.createElement('div'),
+                      number = document.createElement('p');
+
+                content.classList.add('history__content');
+                number.classList.add('history__number');
+
+                number.innerHTML = arrayOfResults[arrayOfResults.length - 1];
+
+                content.appendChild(number);
+                history.appendChild(content);
 }
-
-
-console.log(arrayOfResults);
 
 
 
