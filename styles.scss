@@ -41,6 +41,34 @@ main {
 
 }
 
+.error {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+    &__container {
+        background-color: rgb(197, 52, 44);
+        height: 50px;
+        width: 300px;
+        border-radius: 25px;
+        margin: 15px 0;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__paragraph {
+        text-align: center;
+        color: #fff;
+
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+
 .history {
     position: absolute;
     top: 0;
@@ -48,6 +76,8 @@ main {
 
     width: 100px;
     background-color: rgb(180, 107, 107);
+
+    z-index: 2;
     &__content {
         margin: 10px 0;
         background-color: rgb(160, 54, 54);
